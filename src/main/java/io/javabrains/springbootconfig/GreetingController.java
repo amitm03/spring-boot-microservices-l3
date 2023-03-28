@@ -2,6 +2,7 @@ package io.javabrains.springbootconfig;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -34,5 +35,13 @@ public class GreetingController {
     @GetMapping("/dbsettings")
     public String dbsettingValues(){
         return dbSettings.getConnection()+" "+dbSettings.getHost();
+    }
+
+    @Autowired
+    private Environment env;
+
+    @GetMapping("/envdetails")
+    public String envdetails(){
+        return env.toString();
     }
 }

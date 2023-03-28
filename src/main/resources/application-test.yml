@@ -1,0 +1,17 @@
+my:
+  greeting: Hello Swati
+  list:
+    values: One,Two,Three
+
+server.port: 8085
+
+db:
+  connection: test-connection-string-here
+  host: 127.0.0.1
+  port: 1200
+
+management.endpoints.web.exposure.include : "*"
+
+app:
+  name: My App
+  description: Welcome to ${app.name}
