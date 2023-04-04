@@ -1,16 +1,6 @@
-my:
-  greeting: Hello Swati
-  list:
-       values: One,Two,Three
-
 server.port: 8085
 
-dbValues: "{connectionString:'http://___',userName:'user',password:'pass'}"
-
-db:
-    Values: "{connectionString:'http://___',userName:'user',password:'pass'}"
-    host: 127.0.0.1
-    port: 1200
+#dbValues: "{connectionString:'http://___',userName:'user',password:'pass'}"
 
 management.endpoints.web.exposure.include : "*"
 spring.profiles.active: test
@@ -18,3 +8,6 @@ spring.profiles.active: test
 app:
     name: My App
     description: Welcome to ${app.name}
+
+spring.cloud.config.url: http://localhost:8086
+spring.application.name: spring-boot-config

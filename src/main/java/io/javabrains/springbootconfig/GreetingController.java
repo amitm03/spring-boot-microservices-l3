@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
+@RefreshScope
 public class GreetingController {
 
     @Value("${my.greeting : default Value}")

@@ -5,6 +5,8 @@ my:
 
 server.port: 8085
 
+dbValues: "{connectionString:'http://___',userName:'user',password:'pass'}"
+
 db:
   connection: test-connection-string-here
   host: 127.0.0.1
